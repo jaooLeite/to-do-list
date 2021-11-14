@@ -1,25 +1,29 @@
 const btn = document.querySelector('#add')
 const lista = document.querySelector('.lista')
 
-btn.addEventListener('click', (e)=> {
+function inserirElementos(e) {
   e.preventDefault()
 
   const tarefa = document.getElementById('task').value
 
-  lista.innerHTML +=  `
-    <li class="tarefas">
-    ${tarefa}<button class="btnDelete">🗑</button>
-    </li>`
+  lista.innerHTML +=
+    `
+    <div>
+      <input type="checkbox" id="check">
+      <li class="tarefas" >${tarefa}<button>🗑</button></li>
+    </div>`
 
   const btn = document.querySelectorAll('.tarefas')
 
   btn.forEach((button)=>{
-    button.addEventListener('click', () => {
+    button.addEventListener('click', function removerElemento() {
+
+      button.previousElementSibling.remove()
       button.remove()
+
     })
   })
+}
 
-})
-
-
+btn.addEventListener('click', inserirElementos)
 
