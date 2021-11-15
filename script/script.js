@@ -14,6 +14,15 @@ function inserirElementos(e) {
     </div>`
 
   const btn = document.querySelectorAll('.tarefas')
+  const checks = document.querySelectorAll('#check')
+
+  checks.forEach((check) => {
+    check.addEventListener('click', function addLineTrought(){
+
+      check.nextElementSibling.classList.toggle('line')
+
+    })
+  })
 
   btn.forEach((button)=>{
     button.addEventListener('click', function removerElemento() {
@@ -23,6 +32,9 @@ function inserirElementos(e) {
 
     })
   })
+
+
+
 }
 
 btn.addEventListener('click', inserirElementos)
