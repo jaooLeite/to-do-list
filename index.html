@@ -4,20 +4,36 @@
   <meta charset="UTF-8">
   <title>To-Do-List DIH</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-  <h1>To-Do-List</h1>
-  <form>
-    <label>
-      <input type="text" id="task" placeholder="Adicione sua tarefa" maxlength="28">
-      <button id="add">Adicionar</button>
-    </label>
-  </form>
-  <ul class="lista">
-  </ul>
-</div>
+  <header>
+    <h1 class="titulo">To-Do-List</h1>
+  </header>
+
+  <div class="container">
+
+    <form onsubmit="return false;" class="form">
+      <label class="label">
+        <input class="input" type="text" id="task" placeholder="Adicione sua tarefa"
+               maxlength="20">
+        <button id="add" class="btn">Adicionar</button>
+      </label>
+    </form>
+    <ul class="lista">
+    </ul>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Dev In House &copy; 2021 &middot;
+      <a href="https://github.com/jaooLeite">GitHub</a>
+    </p>
+  </footer>
 
 <script src="script/script.js"></script>
 </body>
